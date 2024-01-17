@@ -1,0 +1,13 @@
+{
+    "name": "bobanum/gvalue-nuxt",
+    "minimum-stability": "stable",
+    "require": {
+        "bobanum/restinpeace": "@dev"
+    },
+    "repositories": {
+        "bobanum/restinpeace": {
+            "type": "path",
+            "url": "C:\\Users\\bo_ba\\Github\\Github_bobanum\\RestInPeace"
+        }
+    }
+}
