@@ -1,7 +1,7 @@
 #!/bin/bash
 
-nuxt_port=8000
-api_port=8001
+nuxt_port=3000
+api_port=8080
 
 while [[ $# -gt 0 ]]; do
     arg="$1"
