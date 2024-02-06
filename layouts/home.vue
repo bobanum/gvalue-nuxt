@@ -1,7 +1,9 @@
 <template>
 	<div id="interface" class="home">
 		<Header />
-		<NuxtPage />
+		<div id="app">
+			<NuxtPage />
+		</div>
 		<Footer />
 	</div>
 </template>

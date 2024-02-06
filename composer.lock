@@ -4,15 +4,15 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2179d1abdc32f5fa2b365944ccb93c51",
+    "content-hash": "6d2cb147edb4fdfc10883545aa341d7f",
     "packages": [
         {
             "name": "bobanum/restinpeace",
             "version": "dev-main",
             "dist": {
                 "type": "path",
-                "url": "C:/Users/bo_ba/Github/Github_bobanum/RestInPeace",
-                "reference": "e4d5fea13ec65a8ed28c9e3cbd2e1fb331af620d"
+                "url": "C:/Users/bo_ba/github/github_bobanum/RestInPeace",
+                "reference": "297697f447ec7040483225996b0e5f4dcb7aebb8"
             },
             "require": {
                 "doctrine/inflector": "^2.0",

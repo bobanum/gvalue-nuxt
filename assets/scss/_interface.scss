@@ -3,31 +3,16 @@
 	display: grid;
 	grid-template-rows: auto 1fr auto;
 
-	& > header {
-		.logo {
-			height: 2em;
-		}
-	}
 }
 
 header,
 footer {
 	display: flex;
-	padding: 0.5em;
+	padding: 0.5em 1em;
 	align-items: center;
 	gap: 0.5em;
-	h1 {
-		font-size: 2em;
-	}
+	
 	background-color: hsl(var(--hue), var(--sat), 30%);
 	color: hsl(var(--hue), var(--sat), 100%);
 }
-.home {
-	color: white;
-	header {
-		font-size: 2em;
-	}
-	#app {
-		background-color: hsl(var(--hue), var(--sat), 30%);
-	}
-}
+@import "header";

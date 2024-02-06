@@ -2,7 +2,7 @@
 	<div id="interface">
 		<Header />
 		<div id="app">
-			<slot />
+			<NuxtPage/>
 		</div>
 		<Footer />
 	</div>

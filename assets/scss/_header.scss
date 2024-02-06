@@ -1,0 +1,33 @@
+#interface {
+    &>header {
+        justify-content: space-between;
+        .logo {
+            height: 1.75em;
+        }
+
+        svg {
+            height: 1.5em;
+            width: 1.5em;
+            fill: white;
+        }
+
+        h1 a {
+            font-size: 1em;
+            display: flex;
+            align-items: center;
+            text-shadow: 0 0.05em #0008;
+            gap: 0.5em;
+        }
+    }
+    &.home {
+        color: white;
+    
+        header h1 {
+            font-size: 2em;
+        }
+    
+        #app {
+            background-color: hsl(var(--hue), var(--sat), 30%);
+        }
+    }
+}
