@@ -2,7 +2,7 @@ import Model from './Model.js';
 import Department from './Department.js';
 
 export default class School extends Model {
-	static tableName = 'schools';
+	static entryPoint = 'schools';
 	_departments = null;
 	constructor(id, name, address, phone, email) {
 		super();

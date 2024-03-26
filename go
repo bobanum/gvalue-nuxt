@@ -33,4 +33,4 @@ done
 npm run dev -- -o --port $nuxt_port &
 
 # Start PHP
-php -S localhost:"$api_port" -t public &
+php -S localhost:"$api_port" -t public/api &

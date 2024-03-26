@@ -1836,5 +1836,5 @@ return [
 	],
 	'views' => [
 	],
-	'updated_at' => 1705957976,
+	'updated_at' => 1711379461,
 ];
