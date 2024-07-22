@@ -14,10 +14,10 @@ export default class School extends Model {
 	}
 	get departments() {
 		if (this._departments) return this._departments;
-		console.log('School.departments()', this._departments);
+		// console.log('School.departments()', this._departments);
 		this._departments = [];
 		Department.of(this).then(departments => {
-			console.log('School.departments() departments', departments);
+			// console.log('School.departments() departments', departments);
 			this._departments.push(...departments);
 		});
 		return this._departments;

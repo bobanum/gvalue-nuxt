@@ -7,4 +7,7 @@ export default class Teacher extends Model {
 		super();
 		this.id = id;
 	}
+	get name() {
+		return this.first_name;
+	}
 }

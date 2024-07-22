@@ -11,7 +11,7 @@
 		</div>
 		<div>
 			<label for="teacher_id">Professeur</label>
-			<TeacherSelect :teachers="teachers" v-model="evaluation.teacher_id" />
+			<TeacherSelect :teachers="department.teachers" v-model="evaluation.teacher_id" />
 		</div>
 		<div>
 			<button type="submit">Créer</button>
@@ -19,11 +19,17 @@
 	</form>
 </template>
 <script setup>
+import TeacherModel from "~/models/Teacher.js";
+import DepartmentModel from "~/models/Department.js";
 const props = defineProps({
 	evaluation: {
 		type: Object,
 		required: true
 	}
+});
+const department = ref({});
+DepartmentModel.with('teachers').find(1).then((inDepartment) => {
+	department.value = inDepartment;
 });
 
 </script>

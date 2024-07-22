@@ -10,11 +10,11 @@
         <tbody v-if="elements.length">
             <tr v-for="element in elements" :key="element.id">
                 <td>coche</td>
-                <td><NuxtLink :to="`/evaluation/${element.id}`">
+                <td><NuxtLink :to="`/evaluations/${element.id}`">
                     {{ element.title }}</NuxtLink>
                 </td>   
                 <td>
-                    <NuxtLink :to="`/evaluation/${element.id}/edit`">Edit</NuxtLink>
+                    <NuxtLink :to="`/evaluations/${element.id}/edit`">Edit</NuxtLink>
                     <!-- <button @click="deleteElement(element.id)">Delete</button> -->
                 </td>             
             </tr>
@@ -27,7 +27,7 @@
         <tfoot>
             <tr>
                 <td class="full-width">
-                    <NuxtLink to="/evaluation/create">Create a new evaluation</NuxtLink>
+                    <NuxtLink to="/evaluations/create">Create a new evaluation</NuxtLink>
                 </td>
             </tr>
         </tfoot>

@@ -12,7 +12,6 @@ import SchoolModel from "~/models/School.js";
 
 const schools = ref([]);
 const route = useRoute();
-console.log(route);
 onMounted(async () => {
     const inSchools = await SchoolModel.all();
     schools.value = inSchools;

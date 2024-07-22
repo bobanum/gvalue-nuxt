@@ -12,5 +12,4 @@ export default class Department extends Model {
 	static getPayload(response) {
         return response.departments || super.getPayload(response);
     }
-
 }
