@@ -1,7 +1,7 @@
 import { Model as ModelBase } from '@bobanum/vue-model';
-// const config = useRuntimeConfig()
+const config = useRuntimeConfig()
 
-// console.log(config);
+console.log(config);
 
 export default class Model extends ModelBase {
     static getPayload(response) {

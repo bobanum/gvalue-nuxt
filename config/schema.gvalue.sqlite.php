@@ -1567,7 +1567,7 @@ return [
 				'last_name' => [
 					'cid' => '3',
 					'name' => 'last_name',
-					'type' => 'varchar(255)',
+					'type' => 'NUMERIC',
 					'notnull' => '1',
 					'dflt_value' => NULL,
 					'pk' => '0',
@@ -1642,12 +1642,6 @@ return [
 					'type' => 2,
 					'foreign_key' => 'teacher_id',
 				],
-				'department' => [
-					'name' => 'department',
-					'table' => 'departments',
-					'type' => 1,
-					'foreign_key' => 'department_id',
-				],
 				'user' => [
 					'name' => 'user',
 					'table' => 'teachers',
@@ -1660,23 +1654,29 @@ return [
 					'type' => 2,
 					'foreign_key' => 'user_id',
 				],
+				'department' => [
+					'name' => 'department',
+					'table' => 'departments',
+					'type' => 1,
+					'foreign_key' => 'department_id',
+				],
 			],
 			'foreign_keys' => [
-				'department_id' => [
+				'user_id' => [
 					'id' => '0',
 					'seq' => '0',
-					'table' => 'departments',
-					'from' => 'department_id',
+					'table' => 'users',
+					'from' => 'user_id',
 					'to' => 'id',
 					'on_update' => 'NO ACTION',
 					'on_delete' => 'CASCADE',
 					'match' => 'NONE',
 				],
-				'user_id' => [
+				'department_id' => [
 					'id' => '1',
 					'seq' => '0',
-					'table' => 'users',
-					'from' => 'user_id',
+					'table' => 'departments',
+					'from' => 'department_id',
 					'to' => 'id',
 					'on_update' => 'NO ACTION',
 					'on_delete' => 'CASCADE',
@@ -1716,7 +1716,7 @@ return [
 				'last_name' => [
 					'cid' => '3',
 					'name' => 'last_name',
-					'type' => 'varchar(255)',
+					'type' => 'NUMERIC',
 					'notnull' => '1',
 					'dflt_value' => NULL,
 					'pk' => '0',
@@ -1791,12 +1791,6 @@ return [
 					'type' => 2,
 					'foreign_key' => 'teacher_id',
 				],
-				'department' => [
-					'name' => 'department',
-					'table' => 'departments',
-					'type' => 1,
-					'foreign_key' => 'department_id',
-				],
 				'user' => [
 					'name' => 'user',
 					'table' => 'teachers',
@@ -1809,23 +1803,29 @@ return [
 					'type' => 2,
 					'foreign_key' => 'user_id',
 				],
+				'department' => [
+					'name' => 'department',
+					'table' => 'departments',
+					'type' => 1,
+					'foreign_key' => 'department_id',
+				],
 			],
 			'foreign_keys' => [
-				'department_id' => [
+				'user_id' => [
 					'id' => '0',
 					'seq' => '0',
-					'table' => 'departments',
-					'from' => 'department_id',
+					'table' => 'users',
+					'from' => 'user_id',
 					'to' => 'id',
 					'on_update' => 'NO ACTION',
 					'on_delete' => 'CASCADE',
 					'match' => 'NONE',
 				],
-				'user_id' => [
+				'department_id' => [
 					'id' => '1',
 					'seq' => '0',
-					'table' => 'users',
-					'from' => 'user_id',
+					'table' => 'departments',
+					'from' => 'department_id',
 					'to' => 'id',
 					'on_update' => 'NO ACTION',
 					'on_delete' => 'CASCADE',
@@ -1835,8 +1835,8 @@ return [
 		],
 	],
 	'views' => [
-		'teachers_index' => [
-			'name' => 'teachers_index',
+		'schools__index' => [
+			'name' => 'schools__index',
 			'columns' => [
 				'id' => [
 					'cid' => '0',
@@ -1846,25 +1846,25 @@ return [
 					'dflt_value' => NULL,
 					'pk' => '0',
 				],
-				'slug' => [
+				'name' => [
 					'cid' => '1',
-					'name' => 'slug',
+					'name' => 'name',
 					'type' => 'varchar(255)',
 					'notnull' => '0',
 					'dflt_value' => NULL,
 					'pk' => '0',
 				],
-				'first_name' => [
+				'abbr' => [
 					'cid' => '2',
-					'name' => 'first_name',
+					'name' => 'abbr',
 					'type' => 'varchar(255)',
 					'notnull' => '0',
 					'dflt_value' => NULL,
 					'pk' => '0',
 				],
-				'last_name' => [
+				'slug' => [
 					'cid' => '3',
-					'name' => 'last_name',
+					'name' => 'slug',
 					'type' => 'varchar(255)',
 					'notnull' => '0',
 					'dflt_value' => NULL,
@@ -1878,6 +1878,49 @@ return [
 			'foreign_keys' => [
 			],
 		],
+		'users__index' => [
+			'name' => 'users__index',
+			'columns' => [
+				'id' => [
+					'cid' => '0',
+					'name' => 'id',
+					'type' => 'INTEGER',
+					'notnull' => '0',
+					'dflt_value' => NULL,
+					'pk' => '0',
+				],
+				'name' => [
+					'cid' => '1',
+					'name' => 'name',
+					'type' => 'varchar(255)',
+					'notnull' => '0',
+					'dflt_value' => NULL,
+					'pk' => '0',
+				],
+				'email' => [
+					'cid' => '2',
+					'name' => 'email',
+					'type' => 'varchar(191)',
+					'notnull' => '0',
+					'dflt_value' => NULL,
+					'pk' => '0',
+				],
+				'role' => [
+					'cid' => '3',
+					'name' => 'role',
+					'type' => 'int',
+					'notnull' => '0',
+					'dflt_value' => NULL,
+					'pk' => '0',
+				],
+			],
+			'indexes' => [
+			],
+			'relations' => [
+			],
+			'foreign_keys' => [
+			],
+		],
 	],
-	'updated_at' => 1711716348,
+	'updated_at' => 1723147438,
 ];

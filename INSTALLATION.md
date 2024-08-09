@@ -8,7 +8,7 @@
 5. Sortir le dossier `restinpeace` du dossier vendor (ou du projet)
 6. Remettre "repositories" et ajuster le chemin.
 7. `composer update`
-8. Modifier `.gtignore` au besoin
+8. Modifier `.gitignore` au besoin
 9.  Créer, copier ou linker le dossier database `ln -s restinpeace/database/ database`
 10. Ajouter le `.env` 
 

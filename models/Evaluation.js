@@ -6,7 +6,7 @@ export default class Evaluation extends Model {
 		super();
 		this.id = id;
 	}
-	// static getPayload(response) {
-    //     return response.evaluations || super.getPayload(response);
-    // }
+	static getPayload(response) {
+        return response.evaluations || super.getPayload(response);
+    }
 }

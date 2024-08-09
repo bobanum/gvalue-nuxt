@@ -9,8 +9,13 @@
 import EvaluationModel from "~/models/Evaluation.js";
 
 const evaluations = ref([]);
+const m = new ModelComp();
+console.log(m);
 
-onMounted(async () => {
-	evaluations.value = await EvaluationModel.all();
+EvaluationModel.all().then((data) => {
+	evaluations.value = data;
 });
+// onMounted(async () => {
+// 	evaluations.value = await EvaluationModel.all();
+// });
 </script>
