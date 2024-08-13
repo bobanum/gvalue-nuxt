@@ -1,4 +1,4 @@
-import Model from './Model.js';
+import Model from '../Model.js';
 export default class Comment extends Model {
     static parseValue(comment, total) {
         // - 0 vaut toujours 0

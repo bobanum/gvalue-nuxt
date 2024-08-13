@@ -5,7 +5,7 @@
 	</div>
 </template>
 <script setup>
-import EvaluationModel from "~/models/Evaluation.js";
+import EvaluationModel from "~/composables/model/Evaluation.js";
 
 const evaluation = ref({});
 

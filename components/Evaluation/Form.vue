@@ -19,8 +19,8 @@
 	</form>
 </template>
 <script setup>
-import TeacherModel from "~/models/Teacher.js";
-import DepartmentModel from "~/models/Department.js";
+import TeacherModel from "~/composables/model/Teacher.js";
+import DepartmentModel from "~/composables/model/Department.js";
 const props = defineProps({
 	evaluation: {
 		type: Object,

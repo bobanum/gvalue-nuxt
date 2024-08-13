@@ -8,7 +8,7 @@
 </template>
   
 <script setup>
-import SchoolModel from "~/models/School.js";
+import SchoolModel from "~/composables/model/School.js";
 
 const schools = ref([]);
 const route = useRoute();

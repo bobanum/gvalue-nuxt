@@ -1,4 +1,4 @@
-import Model from './Model.js';
+import Model from '../Model.js';
 import CommentModel from './Comment.js';
 export default class Parameter extends Model {
     static totalValeur(parameter) {

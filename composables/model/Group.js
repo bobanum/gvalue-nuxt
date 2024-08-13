@@ -1,4 +1,4 @@
-import Model from './Model';
+import Model from './Model.js.zzz';
 
 export default class Group extends Model {
     static relations = {
