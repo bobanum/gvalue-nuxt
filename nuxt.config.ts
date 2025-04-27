@@ -7,5 +7,11 @@ export default defineNuxtConfig({
       apiUrl: '/api',
     },
   },
+  imports: {
+    dirs: [
+        // 'composables',
+        'composables/models',
+      ]
+  }
 });
 

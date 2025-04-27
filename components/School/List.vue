@@ -24,7 +24,7 @@
 </template>
   
 <script setup>
-import SchoolModel from "~/composables/model/School.js";
+import SchoolModel from "~/composables/models/School.js";
 const props = defineProps({
     schools: {
         type: Array,

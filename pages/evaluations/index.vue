@@ -6,10 +6,13 @@
 	</div>
 </template>
 <script setup>
-import EvaluationModel from "~/composables/model/Evaluation.js";
 const evaluations = ref([]);
 
-EvaluationModel.all().then((data) => {
+Evaluation.all().then((data) => {
+	console.log(data);
+	if (!data) {
+		return;
+	}
 	evaluations.value = data;
 });
 // onMounted(async () => {
